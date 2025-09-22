@@ -5,7 +5,7 @@
   "description": "Actionpackd AI SDK - Secure, typed AI interactions with multiple providers",
   "repository": {
     "type": "git",
-    "url": "https://github.com/actionpackd/ai-sdk.git"
+    "url": "git+https://github.com/ActionpackdHQ/AI-SDK.git"
   },
   "keywords": [
     "ai",
@@ -18,9 +18,9 @@
   "author": "Actionpackd",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/actionpackd/ai-sdk/issues"
+    "url": "https://github.com/ActionpackdHQ/AI-SDK/issues"
   },
-  "homepage": "https://github.com/actionpackd/ai-sdk#readme",
+  "homepage": "https://github.com/ActionpackdHQ/AI-SDK#readme",
   "scripts": {
     "build": "pnpm -r build",
     "test": "pnpm -r test",
