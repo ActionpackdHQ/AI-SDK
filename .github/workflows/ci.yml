@@ -1,0 +1,43 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        run: |
+          git clone https://github.com/${{ github.repository }}.git .
+          git checkout ${{ github.ref }}
+      
+      - name: Setup Node.js
+        run: |
+          curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+          sudo apt-get install -y nodejs
+          
+      - name: Install pnpm
+        run: npm install -g pnpm@8
+          
+      - name: Install dependencies
+        run: pnpm install
+        
+      - name: Check for secrets
+        run: node packages/sdk-core/src/utils/secrets-check.ts
+        
+      - name: Security audit
+        run: pnpm audit
+        
+      - name: Lint
+        run: pnpm lint
+        
+      - name: Test
+        run: pnpm test
+        
+      - name: Build
+        run: pnpm build

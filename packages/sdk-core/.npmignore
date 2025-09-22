@@ -1,0 +1,52 @@
+# Source files
+src/
+tests/
+examples/
+docs/
+
+# Configuration files
+.eslintrc.cjs
+.prettierrc
+tsconfig.json
+vitest.config.ts
+.github/
+.vscode/
+.idea/
+
+# Development files
+*.test.ts
+*.spec.ts
+*.test.tsx
+*.spec.tsx
+*.map
+*.tsbuildinfo
+
+# Documentation
+CONTRIBUTING.md
+CHANGELOG.md
+*.md
+!README.md
+
+# Examples and demos
+examples/
+
+# Build artifacts
+coverage/
+.nyc_output/
+.vercel/
+.netlify/
+
+# Environment files
+.env*
+.env.local
+.env.*.local
+
+# Editor files
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Debug files
+*.log
+*.debug

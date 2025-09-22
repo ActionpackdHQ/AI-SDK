@@ -1,0 +1,78 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+.npm/
+.yarn/
+
+# Build outputs
+dist/
+.next/
+build/
+out/
+lib/
+*.tsbuildinfo
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+.env.development
+.env.test
+.env.production
+
+# IDE
+.vscode/
+.idea/
+*.sublime-*
+*.swp
+*.swo
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Testing
+coverage/
+.nyc_output/
+
+# OS
+.DS_Store
+Thumbs.db
+.directory
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# Package files
+*.tgz
+
+# Misc
+.vercel
+.netlify
+*.pem
+.history/
+
+# Local development files
+/local/
+*.local
+
+# Generated documentation
+/docs/api/
+/docs/generated/
+
+# Debug files
+.debug/
+*.debug
+
+# Editor directories and files
+.settings/
+.project
+.classpath
+*.launch
+*.iml

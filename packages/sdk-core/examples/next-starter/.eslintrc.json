@@ -1,0 +1,13 @@
+{
+  "extends": [
+    "next/core-web-vitals"
+  ],
+  "parserOptions": {
+    "project": "/Users/ramasundaram/Documents/Dev/Actionpackd AI SDK/packages/sdk-core/examples/next-starter/tsconfig.json",
+    "sourceType": "module"
+  },
+  "rules": {
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@next/next/no-html-link-for-pages": "off"
+  }
+}
