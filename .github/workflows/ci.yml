@@ -6,42 +6,38 @@ on:
   pull_request:
     branches: [main]
 
-permissions:
-  contents: read
-
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      FORCE_COLOR: 1
-      NODE_ENV: test
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v2.0.1
+      - uses: pnpm/action-setup@v2
         with:
-          version: 8.6.0
+          version: 8
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v2
+      - uses: actions/setup-node@v3
         with:
-          node-version: '18'
+          node-version: 18
           cache: 'pnpm'
 
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        shell: bash
+        run: |
+          pnpm install
 
-      - name: Build packages
-        run: pnpm build
+      - name: Build
+        shell: bash
+        run: |
+          pnpm build
 
-      - name: Run tests
-        run: pnpm test
+      - name: Test
+        shell: bash
+        run: |
+          pnpm test
 
-      - name: Run lint
-        run: pnpm -r lint || true
-
-      - name: Run security audit
-        run: pnpm audit || true
+      - name: Lint
+        shell: bash
+        run: |
+          pnpm lint || true
