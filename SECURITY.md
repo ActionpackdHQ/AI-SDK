@@ -66,7 +66,7 @@
 
 ## Reporting a Vulnerability
 
-Please report security vulnerabilities to security@actionpackd.ai
+Please report security vulnerabilities to ram@actionpackd.com
 
 We will acknowledge receipt within 24 hours and provide a detailed response within 48 hours, including:
 - Confirmation of the issue
