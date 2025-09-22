@@ -1,10 +1,10 @@
 {
   "name": "@actionpackd/sdk-core",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Actionpackd AI SDK - Secure, typed AI interactions with multiple providers",
   "repository": {
     "type": "git",
-    "url": "https://github.com/actionpackd/ai-sdk.git"
+    "url": "https://github.com/ActionpackdHQ/AI-SDK.git"
   },
   "keywords": [
     "ai",
