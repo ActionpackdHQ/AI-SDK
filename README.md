@@ -5,7 +5,7 @@
 
 [![npm version](https://img.shields.io/npm/v/@actionpackd/sdk-core)](https://www.npmjs.com/package/@actionpackd/sdk-core)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
-[![CI](https://github.com/ActionpackdHQ/AI-SDK/actions/workflows/ci.yml/badge.svg?branch=main)](./.github/workflows/ci.yml)
+[![CI](https://github.com/ActionpackdHQ/ai-sdk/actions/workflows/ci.yml/badge.svg?branch=main)](./.github/workflows/ci.yml)
 
 ---
 
