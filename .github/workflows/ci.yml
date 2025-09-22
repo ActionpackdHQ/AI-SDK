@@ -12,23 +12,23 @@ jobs:
 
     steps:
       - name: Checkout code
-        run: |
-          git clone https://github.com/${{ github.repository }}.git .
-          git checkout ${{ github.ref }}
+        uses: actions/checkout@v4
       
       - name: Setup Node.js
-        run: |
-          curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
-          sudo apt-get install -y nodejs
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
           
       - name: Install pnpm
-        run: npm install -g pnpm@8
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
           
       - name: Install dependencies
         run: pnpm install
         
       - name: Check for secrets
-        run: node packages/sdk-core/src/utils/secrets-check.ts
+        run: pnpm tsx packages/sdk-core/src/utils/secrets-check.ts
         
       - name: Security audit
         run: pnpm audit
